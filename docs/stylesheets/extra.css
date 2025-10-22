@@ -1,0 +1,152 @@
+/* Hide the default header/navigation bar */
+.md-header__inner {
+    display: none;
+}
+
+/* Hide the left sidebar navigation */
+.md-sidebar--primary {
+    display: none;
+}
+
+/* Hide the right sidebar (table of contents) */
+.md-sidebar--secondary {
+    display: none;
+}
+
+/* Hide all table of contents elements */
+.md-content__inner > .md-typeset > .md-content__toc,
+.md-nav--secondary,
+nav[class*="toc"],
+.toc,
+[data-md-component="toc"] {
+    display: none !important;
+}
+
+/* Adjust main content to fill the space and center it */
+.md-main__inner {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.md-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.md-content__inner {
+    margin: 0;
+}
+
+/* Center and bold the main title with larger font */
+.md-content h1:first-of-type {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+/* Center the subtitle (first paragraph after h1) */
+.md-content h1:first-of-type + p {
+    text-align: center;
+}
+
+/* Center and bold h2 headings, italic for Why GKS */
+.md-content h2 {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Style h3 headings (like Specifications) to match h2 with italic */
+.md-content h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5625em; /* Match h2 font size */
+    font-style: italic;
+}
+
+/* Style table images - VRS and VA keep original width, Cat-VRS and SA scaled */
+.md-content table img[alt="VRS"],
+.md-content table img[alt="VA"] {
+    width: auto;
+    height: auto;
+}
+
+.md-content table img[alt="Cat-VRS"],
+.md-content table img[alt="SA"] {
+    height: 150px;
+    width: auto;
+}
+
+/* Center images in table cells */
+.md-content table td:first-child {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Style paragraphs after "Why GKS?" h2 */
+.md-content h2:first-of-type + p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.md-content h2:first-of-type + p + p,
+.md-content h2:first-of-type + p + p + p {
+    text-align: center;
+}
+
+/* Custom header */
+.custom-header {
+    background-color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.custom-header-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.custom-header-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.custom-header-nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.custom-header-nav a:hover {
+    color: #0066cc;
+}
+
+/* Adjust content to account for custom header */
+.md-content {
+    margin-top: 0;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .custom-header {
+    background-color: #1a1a1a;
+    border-bottom-color: #333;
+}
+
+[data-md-color-scheme="slate"] .custom-header-nav a {
+    color: #fff;
+}
+
+[data-md-color-scheme="slate"] .custom-header-nav a:hover {
+    color: #64b5f6;
+}
