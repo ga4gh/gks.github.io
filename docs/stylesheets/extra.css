@@ -55,6 +55,7 @@ nav[class*="toc"],
     text-align: center;
     font-weight: bold;
     font-style: italic;
+    clear: both;
 }
 
 /* Style h3 headings (like Specifications) to match h2 with italic */
