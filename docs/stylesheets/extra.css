@@ -115,21 +115,72 @@ nav[class*="toc"],
     width: auto;
 }
 
-.custom-header-nav {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+/* Hamburger menu container */
+.hamburger-menu {
+    position: relative;
 }
 
-.custom-header-nav a {
+/* Hamburger button */
+.hamburger-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.hamburger-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+/* Hamburger navigation menu */
+.hamburger-nav {
+    position: absolute;
+    top: calc(100% + 1rem);
+    right: 0;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    min-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.hamburger-nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.hamburger-nav a {
+    display: block;
     color: #333;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
-    transition: color 0.2s;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s, color 0.2s;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.custom-header-nav a:hover {
+.hamburger-nav a:last-child {
+    border-bottom: none;
+}
+
+.hamburger-nav a:hover {
+    background-color: #f5f5f5;
     color: #0066cc;
 }
 
@@ -144,10 +195,21 @@ nav[class*="toc"],
     border-bottom-color: #333;
 }
 
-[data-md-color-scheme="slate"] .custom-header-nav a {
-    color: #fff;
+[data-md-color-scheme="slate"] .hamburger-button span {
+    background-color: #fff;
 }
 
-[data-md-color-scheme="slate"] .custom-header-nav a:hover {
+[data-md-color-scheme="slate"] .hamburger-nav {
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+
+[data-md-color-scheme="slate"] .hamburger-nav a {
+    color: #fff;
+    border-bottom-color: #444;
+}
+
+[data-md-color-scheme="slate"] .hamburger-nav a:hover {
+    background-color: #333;
     color: #64b5f6;
 }
