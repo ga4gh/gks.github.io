@@ -1,0 +1,9 @@
+.md-main__inner {
+  max-width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+
+.md-content {
+  max-width: 900px;
+}

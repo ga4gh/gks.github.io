@@ -1,15 +1,17 @@
 <header class="custom-header">
     <div class="custom-header-logo">
-        <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}">
+        <a href="{{ config.site_url or nav.homepage.url | url }}">
             <img src="{{ 'img/ga4gh-logo.svg' | url }}" alt="GA4GH Logo">
         </a>
     </div>
+
     <div class="hamburger-menu">
         <button class="hamburger-button" aria-label="Menu" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </button>
+
         <nav class="hamburger-nav" id="hamburgerNav">
             <a href="#gks-products-and-study-groups">GKS Products and Study Groups</a>
             <a href="#community">Community</a>
@@ -20,27 +22,3 @@
         </nav>
     </div>
 </header>
-
-<script>
-function toggleMenu() {
-    const nav = document.getElementById('hamburgerNav');
-    nav.classList.toggle('active');
-}
-
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const nav = document.getElementById('hamburgerNav');
-
-    if (!hamburgerMenu.contains(event.target) && nav.classList.contains('active')) {
-        nav.classList.remove('active');
-    }
-});
-
-// Close menu when clicking on a link
-document.querySelectorAll('.hamburger-nav a').forEach(link => {
-    link.addEventListener('click', function() {
-        document.getElementById('hamburgerNav').classList.remove('active');
-    });
-});
-</script>

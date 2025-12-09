@@ -1,27 +1,37 @@
 site_name: GA4GH GKS
-nav:
-  - Home: index.md
-  - About: about.md
+
+nav: []
+
 theme:
   name: material
-  color_mode: dark
   custom_dir: docs/overrides
   features:
+    - navigation.instant
+    - content.code.copy
     - toc.integrate
-
-  palette:
-
-    # Palette toggle for light mode
-    - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/center-content.css
+  - stylesheets/custom-header.css
+
+extra_javascript:
+  - assets/javascripts/menu.js
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ga4gh
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ga4gh
