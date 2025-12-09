@@ -44,7 +44,11 @@ Ready to get involved? Join us at our monthly GKS Think Tanks, short virtual hac
 
 ## GKS In Action
 
-### YouTube
+| | |
+|---|---|
+| [clinvar-gks](https://github.com/clingen-data-model/clinvar-gks) | This project and team aims to stand up and maintain a running pipeline process which will convert all clinvar release data to its GA4GH GKS standard equivalent. |
+
+## YouTube
 
 To learn more about GKS and our products, visit our [YouTube channel](https://www.youtube.com/playlist?list=PLXa1b5-MwOAaIiio-WD0ujpy1LPnT1dRq)! There you will find links to the videos of our GKS Open Houses. These Open Houses are high-level introductions to the work of GKS, presenting new products and product updates, and showcasing implementations of GKS products and standards.
 
