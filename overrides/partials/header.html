@@ -1,0 +1,24 @@
+<header class="custom-header">
+    <div class="custom-header-logo">
+        <a href="{{ config.site_url or nav.homepage.url | url }}">
+            <img src="{{ 'img/ga4gh-logo.svg' | url }}" alt="GA4GH Logo">
+        </a>
+    </div>
+
+    <div class="hamburger-menu">
+        <button class="hamburger-button" aria-label="Menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="hamburger-nav" id="hamburgerNav">
+            <a href="#gks-products-and-study-groups">GKS Products and Study Groups</a>
+            <a href="#community">Community</a>
+            <a href="#gks-in-action">GKS In Action</a>
+            <a href="#youtube">YouTube</a>
+            <a href="#publications">Publications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
