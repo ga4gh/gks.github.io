@@ -44,6 +44,8 @@ Ready to get involved? Join us at our monthly GKS Think Tanks, short virtual hac
 
 ## GKS In Action
 
+These are examples of real-world implementations of the GKS products. [This spreadsheet](https://docs.google.com/spreadsheets/d/1zgPbJyAsoyi7Nc3z_DyIk8Wwo5aTJPs5O_NF_hDlde4/edit?gid=1642382005#gid=1642382005) lists additional projects that are working on implementing GKS products.
+
 | | |
 |---|---|
 | [clinvar-gks](https://github.com/clingen-data-model/clinvar-gks) | This project and team aims to stand up and maintain a running pipeline process which will convert all clinvar release data to its GA4GH GKS standard equivalent. |
